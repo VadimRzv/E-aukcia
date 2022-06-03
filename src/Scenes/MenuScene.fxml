@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.MenuSceneCon">
+   <children>
+      <GridPane prefHeight="556.0" prefWidth="755.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="173.0" minHeight="6.0" prefHeight="88.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="356.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="363.0" minHeight="10.0" prefHeight="323.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="413.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+               <children>
+                  <Label fx:id="UserName" layoutX="14.0" layoutY="14.0" text="Label" textFill="#fffefe">
+                     <font>
+                        <Font name="Hack Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UserMoney" layoutX="14.0" layoutY="36.0" text="Label" textFill="#fffefe">
+                     <font>
+                        <Font name="Hack Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UserId" layoutX="14.0" layoutY="57.0" text="Label" textFill="#fffefe">
+                     <font>
+                        <Font name="Hack Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2E3348;" GridPane.columnIndex="1">
+               <children>
+                  <ButtonBar layoutX="143.0" layoutY="14.0" prefHeight="37.0" prefWidth="220.0">
+                     <buttons>
+                        <Button fx:id="EditUser" mnemonicParsing="false" onAction="#editUserClick" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #F39C63;" text="Edit ">
+                           <font>
+                              <Font name="Hack Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="SingOf" mnemonicParsing="false" onAction="#singOfClick" style="-fx-background-color: #F39C63;" text="Sign of">
+                           <font>
+                              <Font name="Hack Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+            <Label prefHeight="24.0" prefWidth="390.0" text="            Your Item" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Hack Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="19.0" prefWidth="382.0" text="           Item Shop" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Hack Bold" size="19.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableShopItem" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="NameItem" minWidth="0.0" prefWidth="100.0" text="Name" />
+                  <TableColumn fx:id="PriceItem" prefWidth="84.0" text="Price" />
+                  <TableColumn fx:id="OwnerItem" minWidth="0.0" text="Owner" />
+                <TableColumn fx:id="ItemId" minWidth="0.0" prefWidth="90.0" text="Code" />
+              </columns>
+            </TableView>
+            <TableView fx:id="TableUserItem" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="NameUserItem" prefWidth="130.0" text="Name" />
+                <TableColumn fx:id="IdUserItem" prefWidth="142.0" text="Code" />
+                  <TableColumn fx:id="PriceUserItem" prefWidth="103.0" text="Price" />
+              </columns>
+            </TableView>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ButtonBar layoutX="121.0" layoutY="14.0" prefHeight="40.0" prefWidth="242.0">
+                    <buttons>
+                      <Button fx:id="CreatItem" mnemonicParsing="false" onAction="#creatItemClick" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: #F39C63;" text="Creat">
+                           <font>
+                              <Font name="Hack Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="SoldItem" mnemonicParsing="false" onAction="#soldItemClick" style="-fx-background-color: #F39C63;" text="Sold">
+                           <font>
+                              <Font name="Hack Bold" size="13.0" />
+                           </font>
+                        </Button>
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="BuyItem" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#buyItemClick" prefHeight="28.0" prefWidth="103.0" style="-fx-background-color: #F39C63;" text="Buy">
+                     <font>
+                        <Font name="Hack Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
